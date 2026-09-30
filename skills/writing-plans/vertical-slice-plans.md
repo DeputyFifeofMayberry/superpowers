@@ -49,9 +49,9 @@ Use this task shape after the standard plan header:
 
 - [ ] **Deliver [capability] with regression evidence.**
   Acceptance: [test names and exact assertions; spec values and error cases].
-```
-[actual test code with assertions using exact spec values]
-```
+  ```[language]
+  [actual test code with assertions using exact spec values]
+  ```
   Red: run `[actual project command]` before implementation.
   Expected: [the missing behavior, not an unrelated setup error].
   Implement: [paths, signatures, and decisions the engineer cannot infer].

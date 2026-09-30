@@ -59,7 +59,7 @@ visible event stream, and initial application/test fixture files.
 
 The streams preserve visible assistant/user messages, tool calls/results and
 hook events. Thinking blocks, runtime identifiers and system-init metadata were
-omitted; host user paths were scrubbed. These are transformed visible transcripts,
+omitted; host work-directory prefixes were replaced with `<HOST_WORK>`. These are transformed visible transcripts,
 not byte-identical raw logs. Raw local streams were retained in the scratch work
 directory. The reviewer Linux logs were unavailable on this host and are not
 included or represented as inspected.

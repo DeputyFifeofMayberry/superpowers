@@ -30,7 +30,7 @@ test "$(grep -cE '^[[:space:]]*Expected:' "$template")" -eq 3 || {
   echo 'FAIL: Red, Green and Regression each require an Expected: line' >&2
   exit 1
 }
-require '^```' "$template" 'acceptance assertions have a code block'
+require '^  ```\[language\]$' "$template" 'acceptance assertions have an indented, language-tagged code block'
 echo 'PASS: live selector and template contracts are present'
 
 # Fill the live template with illustrative fixture values, not a parallel plan.
@@ -44,6 +44,7 @@ for n in 1 2; do
       -e 's|\[exact existing or earlier-task signatures/types\]|current_member() -> Member|' \
       -e 's|\[exact signatures/types needed by later tasks\]|save_search(owner_id: str, query: str) -> SavedSearch|' \
       -e 's|\[capability\]|saving a search|' \
+      -e 's|```\[language\]|```python|' \
       -e 's|\[test names and exact assertions; spec values and error cases\]|test_saved_search_survives_reload|' \
       -e 's|\[actual test code with assertions using exact spec values\]|assert restored.query == "release status"|' \
       -e 's|\[actual project command\]|pytest tests/test_saved_search.py -q|g' \
@@ -68,6 +69,7 @@ grep -q '^\*\*Interfaces:\*\*' "$brief"
 grep -q 'Red: run' "$brief"
 grep -q 'Green: run' "$brief"
 test "$(grep -cE '^[[:space:]]*Expected:' "$brief")" -eq 3
+grep -q '^  ```python$' "$brief"
 grep -q 'assert restored.query == "release status"' "$brief"
 grep -q 'Commit the verified capability' "$brief"
 if grep -q '^### Task 2:' "$brief"; then
