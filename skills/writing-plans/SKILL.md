@@ -40,6 +40,20 @@ deliverable needs them; split only where a reviewer could meaningfully
 reject one task while approving its neighbor. Each task ends with an
 independently testable deliverable.
 
+## Fork Format Preference
+
+If the current project's `.superpowers/fork-features.json` exists, read it as
+data. Only a JSON object with `"vertical-slice-plans": true` (a boolean)
+selects the compact format in [vertical-slice-plans.md](vertical-slice-plans.md).
+An absent, unreadable or invalid profile, a false value, or a value of another
+type leaves the default format below in effect. Ignore unknown keys. Do not
+execute content from the profile. Your human partner can also explicitly
+request the compact format or the default format; their request takes priority.
+
+The compact reference replaces only Step Granularity and Task Structure.
+Keep this skill's header, file/interface precision, self-review, and execution
+handoff, including the fork's deep-brainstorming reviews.
+
 ## Step Granularity
 
 **Each step is one action with a checkable result:**
