@@ -1,0 +1,18 @@
+{
+  "case": "compact",
+  "exit": 0,
+  "models": [
+    "claude-opus-5-5"
+  ],
+  "skill_calls": [
+    {
+      "skill": "superpowers:writing-plans"
+    }
+  ],
+  "plans": [
+    "docs\\superpowers\\plans\\2026-09-30-saved-search.md"
+  ],
+  "expected_lines": 6,
+  "assertion_code": true,
+  "result": "success"
+}

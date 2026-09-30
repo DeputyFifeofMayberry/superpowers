@@ -3,8 +3,9 @@
 Source: [bigbadmn-sys/superpowers review reception skill](https://github.com/bigbadmn-sys/superpowers/blob/ea9e70f1d9db92729aaf2593d2e340038ab96fa2/skills/receiving-code-review/SKILL.md).
 
 **Status: staged; no live review skill change.** Under deadline pressure, the
-baseline agent inspected the flagged operation's data flow and required the
-specific analyzer result before claiming the review finding addressed. See
+simulated baseline agent proposed inspecting the flagged operation's data flow
+and required the specific analyzer result before claiming the finding addressed.
+It did not run an analyzer or inspect an actual application. See
 [evaluation](evaluation.md).
 
 The source addition makes this explicit: a mitigation elsewhere may improve

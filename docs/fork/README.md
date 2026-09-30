@@ -12,6 +12,9 @@ The manifest distinguishes installed behavior from candidates. A source recommen
 - F33: [exact review finding verification staged](review-finding-candidate.md); current baseline passed.
 
 Read [the evaluation record](evaluation.md) for before/after evidence and limits.
+Read [audit corrections](audit-corrections.md) for execution compatibility fixes
+and newly recorded live sessions, and [research artifacts](research-artifacts.md)
+for archived large reports and evidence transformations.
 The compact preference is instruction-based and defaults off. No integration
 hook, domain pack, external dependency, or project setting was installed by this
 branch. The remaining manifest entries are candidates, except deliberate skips.

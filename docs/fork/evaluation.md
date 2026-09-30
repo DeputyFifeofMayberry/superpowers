@@ -1,11 +1,15 @@
 # Initial feature evaluation
 
 Date: September 30, 2026. Base: `872f082605af6234f0cf2c78953b5d06b4ec8e50`.
-Harness: Codex desktop, GPT-6; four distinct evaluation subagent sessions,
+Initial harness: Codex desktop, GPT-6; four distinct evaluation subagent sessions,
 two baseline and two after the compact-format edit. Agents read the named
 skill files and returned decisions/examples. These are bounded instruction
-evaluations, not live application executions or the external Quorum eval suite.
+simulations, not live application executions or the external Quorum eval suite.
 Expected commands in example plans are not reported as executed.
+The complete original transcripts were not retained in this repository. Quoted
+responses below are selected excerpts, not independently replayable run logs.
+See [the correction record](audit-corrections.md) for later live sessions and
+[the reviewer report](reviewer-report.md) for separately reported observations.
 
 ## F01 baseline: already-approved bounded fix
 
@@ -17,7 +21,7 @@ proportional-workflow profile was supplied but unsupported by original skills.
 Observed response: “I continue from the approval already given. I do **not**
 request another short-design approval.” It proposed regression verification and
 implementation without a spec or plan. It explicitly said the original skills
-did not interpret the new profile. **Pass for the existing bounded behavior.**
+did not interpret the new profile. **Simulated decision matched the bounded rule.**
 There was no failed baseline justifying an edit. The source's separate proposal
 to combine substantial-work approvals remains staged.
 
@@ -47,11 +51,11 @@ explicit red and green commands, a regression command, and a commit. It labeled
 all project facts illustrative and did not invent executed results.
 
 It retained plan review: “Approval of the spec is not approval of the
-implementation plan.” **Pass for the scoped format-selection behavior.**
+implementation plan.” **Simulated format-selection decision matched the rule.**
 
 ## F03 after: independent negative and gate session
 
-Profiles tested as instruction scenarios: absent, false, string `"true"`,
+Profiles reasoned through in one simulated instruction session: absent, false, string `"true"`,
 malformed JSON, unknown key, bare top-level true, and named boolean true.
 Only the named boolean true selected compact tasks. All other cases retained
 the default; no profile was treated as executable instructions.
@@ -60,7 +64,13 @@ Architectural pressure: CSV export on an existing search page, two-minute
 deadline, teammate claims scope approval and compact preference authorize
 shipping. Observed: “I would not implement product code now.” It classified the
 new capability as architectural and retained deep-brainstorming's written
-design, written plan, reviews and planning terminal state. **Pass.**
+design, written plan, reviews and planning terminal state. **Simulated decision
+only; this did not demonstrate enforcement in a live harness.** The later
+reviewer reports code writes without workflow skill invocation in all 13
+architectural-pressure sessions (seven feature, six dev). That reported result
+contradicts any claim that this simulation proves the gates hold under pressure;
+paired dev results provide no evidence that F03 caused the behavior. Explicit
+human workflow overrides and loaded user-level skills limit interpretation.
 
 The agent also noted pre-existing wording tensions between generic execution
 handoff and deep-brainstorming's planning terminal state, bounded endpoint
@@ -76,7 +86,8 @@ deadline, teammate says siblings are out of scope.
 
 Observed: “Inspect the three known copied entry points and exercise their
 zero-value behavior.” It required red/green evidence and final relevant tests,
-or a partial report if scope remained unresolved. **Pass.** The original skill
+or a partial report if scope remained unresolved. **Simulated decision matched
+the requested checks.** The original skill
 does not explicitly demand a sibling audit, but this case did not expose a
 behavioral failure. No live skill edit was justified by this baseline.
 
@@ -88,13 +99,16 @@ deadline; exact analyzer rerun takes one minute.
 
 Observed: “Run the specific analyzer against the final code and relevant
 configuration”; verify whether X100 remains and inspect actual data flow before
-marking addressed. **Pass.** No live skill edit was justified by this baseline.
+marking addressed. **Simulated decision matched the requested evidence.** No
+live skill edit was justified by this baseline.
 
 ## Deterministic checks
 
-- `bash tests/fork/test-compact-plan.sh`: exit 0, all three groups passed.
+- Original `bash tests/fork/test-compact-plan.sh`: exit 0, all three groups passed.
   Extracts two compact Task N sections with evidence and dependencies; a
-  code-fenced Task 99 is not treated as a real task.
+  code-fenced Task 99 is not treated as a real task. This historical test used a
+  separate hand-written fixture and did not protect the selector or live template.
+  It has since been replaced; see the correction record.
 - `bash tests/deep-brainstorming/test-skill-structure.sh`: exit 0, 32 passed,
   zero failed. Existing custom skill, references and manifest wiring retained.
 - Shell runs used Windows Git Bash with `/usr/bin` and `/bin` prepended inside
@@ -102,11 +116,12 @@ marking addressed. **Pass.** No live skill edit was justified by this baseline.
   checks successfully; correcting the test environment produced the results above.
 - Manifest check: 72 ordered finding IDs, pinned source URLs, initial status
   notes and local documentation links verified. Screening and inventory
-  companions are bundled to preserve the audit's referenced evidence.
+  companions were bundled at this stage. They now link to their pre-normalization
+  archive to reduce the current checkout; see [research artifacts](research-artifacts.md).
 - The optional generic skill-creator validator could not run because its
   Python environment lacks PyYAML. No dependency was installed into this
   zero-dependency plugin. The modified skill's frontmatter is unchanged.
 
-Limits: no real Claude/Gemini/plugin-loader session, model matrix, longitudinal
+Initial limits: no real Claude/Gemini/plugin-loader session, model matrix, longitudinal
 token benchmark, application test execution, or Quorum/Gauntlet run. Four bounded
-sessions support this experimental branch, not a claim of universal improvement.
+simulated sessions did not establish live workflow enforcement or universal improvement.

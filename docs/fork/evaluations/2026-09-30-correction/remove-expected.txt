@@ -1,0 +1,1 @@
+FAIL: Red, Green and Regression each require an Expected: line
