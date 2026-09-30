@@ -19,6 +19,8 @@ Live in `tests/`. Currently:
 - `tests/claude-code/test-worktree-native-preference.sh` — RED-GREEN-REFACTOR validation for worktree skill (quorum covers the PRESSURE phase; bash also covers RED/GREEN baselines).
 - `tests/explicit-skill-requests/` — Haiku-specific, multi-turn, and skill-name-prompted tests not covered by quorum.
 - `tests/diagnosing-superpowers/test-skill-structure.sh` — structural checks for the diagnosing-superpowers skill (frontmatter, referenced files, leak scan, word budget); behavior-scenario eval records are kept by the maintainer outside the repo.
+- `tests/deep-brainstorming/test-skill-structure.sh` — structural checks for the deep-brainstorming skill (frontmatter, referenced files, word budget, argument placeholders, brainstorming handoff, Muse manifest entry).
+- `tests/deep-brainstorming/test-trigger.sh` — opt-in, costs API calls: headless `claude -p` runs checking that feature requests reach deep-brainstorming and a bounded change stays with brainstorming (`--reps N`, pass-rate thresholds). Manual scenarios and results are in `tests/deep-brainstorming/manual-acceptance.md`.
 
 Run plugin tests via the relevant directory's `run-*.sh` or `npm test`.
 
