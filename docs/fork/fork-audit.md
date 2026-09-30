@@ -910,7 +910,7 @@ All entries above refer to the pinned upstream tree, not a fork README's compari
 ## Companion artifacts
 
 - [Full selected-fork screening and divergent candidate evidence](superpowers-fork-screening.md): all 2,930 selected results, full unresolved errors, changed-file signatures and detailed evidence for every divergent default.
-- [Pinned source catalog](superpowers-source-catalog.md): inspected repositories, SHAs, ancestry notes, locally measured changed-file counts and file links.
+- [Pinned source catalog](source-catalog.md): inspected repositories, SHAs, ancestry notes, locally measured changed-file counts and file links.
 - [Complete returned fork metadata inventory](superpowers-fork-inventory.csv): all 26,385 distinct public records used for candidate selection.
 
 The report is a recommendation and evidence archive. No changes were made to the user's Superpowers fork or any remote repository.

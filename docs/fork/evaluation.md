@@ -100,6 +100,12 @@ marking addressed. **Pass.** No live skill edit was justified by this baseline.
 - Shell runs used Windows Git Bash with `/usr/bin` and `/bin` prepended inside
   Bash. Initial attempts lacked core utilities in PATH and did not run the
   checks successfully; correcting the test environment produced the results above.
+- Manifest check: 72 ordered finding IDs, pinned source URLs, initial status
+  notes and local documentation links verified. Screening and inventory
+  companions are bundled to preserve the audit's referenced evidence.
+- The optional generic skill-creator validator could not run because its
+  Python environment lacks PyYAML. No dependency was installed into this
+  zero-dependency plugin. The modified skill's frontmatter is unchanged.
 
 Limits: no real Claude/Gemini/plugin-loader session, model matrix, longitudinal
 token benchmark, application test execution, or Quorum/Gauntlet run. Four bounded
