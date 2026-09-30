@@ -350,6 +350,7 @@ Superpowers is built by [Jesse Vincent](https://blog.fsck.com) and the rest of t
 
 **Collaboration** 
 - **brainstorming** - Socratic design refinement
+- **deep-brainstorming** - Collaborative feature discovery: research before questions, a resumable decision record, an approved design, then an approved plan. It engages automatically for new features and subsystems (directly or through brainstorming); resume with `/superpowers:deep-brainstorming <record path>`
 - **writing-plans** - Detailed implementation plans
 - **executing-plans** - Inline plan execution: one context, one final review
 - **dispatching-parallel-agents** - Concurrent subagent workflows
