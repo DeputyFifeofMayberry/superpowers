@@ -2,8 +2,35 @@
 
 Superpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them.
 
+> **This is a fork of [obra/superpowers](https://github.com/obra/superpowers).** It tracks upstream and adds the **deep-brainstorming** skill. See [About This Fork](#about-this-fork) for what's different and how to install it. Everything after that section is the upstream README.
+
+## About This Fork
+
+### What's different
+
+- **deep-brainstorming skill** (`skills/deep-brainstorming/`) - Collaborative discovery for new features and subsystems. It researches the codebase and outside sources before asking questions, asks one question at a time, and keeps a resumable decision record at `docs/superpowers/specs/YYYY-MM-DD-<slug>-design.md`. It ends with an approved design and an approved implementation plan. It writes no product code and never commits.
+- **brainstorming hands off to it** - brainstorming's architectural path now invokes deep-brainstorming instead of running its own spec process. New user-facing features (an export, a theme, a new page) take the architectural path even when they land on an existing page.
+- **Resuming** - Pick up an unfinished session with `/superpowers:deep-brainstorming <record path>`.
+- **Tests** - Structure, trigger, and manual acceptance tests live in `tests/deep-brainstorming/`.
+
+### Installing this fork
+
+**Claude Code:**
+
+```bash
+/plugin marketplace add DeputyFifeofMayberry/superpowers
+/plugin install superpowers@superpowers-dev
+```
+
+If you already have upstream Superpowers installed, uninstall it first so only one copy loads.
+
+**Other harnesses:** The install steps below point at upstream. Where a harness installs from a GitHub repo, replace `obra/superpowers` with `DeputyFifeofMayberry/superpowers`. Marketplace installs (official Claude, Codex, Cursor, Grok, Kimi) get upstream, not this fork.
+
+Report issues with deep-brainstorming on [this fork](https://github.com/DeputyFifeofMayberry/superpowers/issues), not upstream.
+
 ## Table of Contents
 
+- [About This Fork](#about-this-fork)
 - [How it works](#how-it-works)
 - [Commercial Services](#commercial-services)
 - [Getting Started](#installation)
@@ -306,7 +333,7 @@ Restart any active Muse sessions after installing so the `SessionStart` hook tak
 
 ## The Basic Workflow
 
-1. **brainstorming** - Activates before writing code. Refines rough ideas through questions, explores alternatives, presents design in sections for validation. Saves design document.
+1. **brainstorming** - Activates before writing code. Refines rough ideas through questions, explores alternatives, presents design in sections for validation. Saves design document. In this fork, new features and subsystems hand off to **deep-brainstorming**.
 
 2. **using-git-worktrees** - Activates after design approval. Creates isolated workspace on new branch, runs project setup, verifies clean test baseline.
 
