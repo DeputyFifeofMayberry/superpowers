@@ -3,6 +3,10 @@
 Base: `dev` at `872f082605af6234f0cf2c78953b5d06b4ec8e50`.
 Branch: `feature-dump`. Prepared September 30, 2026.
 
+During preparation, `dev` received README updates through
+`305701660bd6b067c2ee2be3298e2919e6631625`; those commits were merged into this
+branch. The baseline evaluations still refer to the original skill snapshot.
+
 This is a collection branch for the 72 audited ideas, not a claim that 72 features have been installed. Existing deep-brainstorming behavior and the fork's development history are the starting point. Each adopted change gets its own commit. Do not merge source forks wholesale.
 
 Statuses: **planned** = candidate awaiting selection and evaluation; **adapted** = a scoped live implementation; **imported** = source implementation brought across; **covered** = baseline behavior already satisfies the scenario; **staged** = disabled proposal kept for further evaluation; **skipped** = deliberately excluded. Source links pin the inspected version. Recommendations are in [the audit](fork-audit.md); snapshot details are in [the source catalog](source-catalog.md).

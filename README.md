@@ -2,8 +2,36 @@
 
 Superpowers is a complete software development methodology for your coding agents, built on top of a set of composable skills and some initial instructions that make sure your agent uses them.
 
+> [!NOTE]
+> **This is a fork of [obra/superpowers](https://github.com/obra/superpowers)** that adds the **deep-brainstorming** skill. Everything below [About This Fork](#about-this-fork) is the upstream README.
+
+## About This Fork
+
+**Deep brainstorming** turns a feature idea into an approved design and plan before any code is written.
+
+```
+research first  →  one question at a time  →  approved design  →  approved plan
+```
+
+| | |
+|---|---|
+| **Triggers** | Automatically for new features and subsystems. brainstorming hands them off. |
+| **Keeps a record** | `docs/superpowers/specs/YYYY-MM-DD-<slug>-design.md`, resumable across sessions |
+| **Resume** | `/superpowers:deep-brainstorming <record path>` |
+| **Won't** | Write product code or commit |
+
+### Install (Claude Code)
+
+```bash
+/plugin marketplace add DeputyFifeofMayberry/superpowers
+/plugin install superpowers@superpowers-dev
+```
+
+Uninstall upstream Superpowers first if you have it. For other harnesses, use the steps below with `DeputyFifeofMayberry/superpowers` in place of `obra/superpowers`. Marketplace installs get upstream, not this fork.
+
 ## Table of Contents
 
+- [About This Fork](#about-this-fork)
 - [How it works](#how-it-works)
 - [Commercial Services](#commercial-services)
 - [Getting Started](#installation)
@@ -306,7 +334,7 @@ Restart any active Muse sessions after installing so the `SessionStart` hook tak
 
 ## The Basic Workflow
 
-1. **brainstorming** - Activates before writing code. Refines rough ideas through questions, explores alternatives, presents design in sections for validation. Saves design document.
+1. **brainstorming** - Activates before writing code. Refines rough ideas through questions, explores alternatives, presents design in sections for validation. Saves design document. In this fork, new features and subsystems hand off to **deep-brainstorming**.
 
 2. **using-git-worktrees** - Activates after design approval. Creates isolated workspace on new branch, runs project setup, verifies clean test baseline.
 
