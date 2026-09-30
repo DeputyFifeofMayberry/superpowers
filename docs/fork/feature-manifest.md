@@ -9,7 +9,7 @@ Statuses: **planned** = candidate awaiting selection and evaluation; **adapted**
 
 | ID | Finding | Status | Source | Integration note |
 | --- | --- | --- | --- | --- |
-| F01 | Proportional planning and one approval for substantial work | planned | [dbbaskette/superpowers-custom](https://github.com/dbbaskette/superpowers-custom/blob/ae60235b42f4ae153e8ae51a1af73f048dad7908/skills/brainstorming/SKILL.md) | Candidate only; not installed or evaluated against this fork. |
+| F01 | Proportional planning and one approval for substantial work | covered / staged | [dbbaskette/superpowers-custom](https://github.com/dbbaskette/superpowers-custom/blob/ae60235b42f4ae153e8ae51a1af73f048dad7908/skills/brainstorming/SKILL.md) | Bounded changes already pass; combined substantial-work approval remains [staged](proportional-workflow.md). |
 | F02 | Skills-only lightweight overlay | planned | [nanyumeng/superpowers-lite](https://github.com/nanyumeng/superpowers-lite/blob/3fef64cc720671bc75924dc02697f0b8d1b7777d/README.md) | Candidate only; not installed or evaluated against this fork. |
 | F03 | Vertical slices instead of scripted layer-by-layer plans | planned | [fryga-io/superpowers-rails](https://github.com/fryga-io/superpowers-rails/blob/8a784957544b9a4f49a150ef316f137132eef58f/skills/writing-plans/SKILL.md) | Candidate only; not installed or evaluated against this fork. |
 | F04 | Micro/lightweight/full workflow router | planned | [REPOZY/superpowers-optimized](https://github.com/REPOZY/superpowers-optimized/blob/38e85b92383e7d18afe4a59cc681c9caa9479e21/skills/using-superpowers/SKILL.md) | Candidate only; not installed or evaluated against this fork. |
