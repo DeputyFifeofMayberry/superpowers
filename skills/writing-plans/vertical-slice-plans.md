@@ -19,12 +19,19 @@ commands, types, or requirements; inspect the project and approved spec first.
 Replace the repeated TDD microsteps with two checkboxes per capability:
 
 1. Deliver the capability through a red/green cycle. Give acceptance test
-   names and exact assertions, the failing-test command and expected failure,
+   names and exact assertions as code, the failing-test command and expected failure,
    implementation paths/signatures and pinned spec values, then the passing-test
    command and expected result. Tests still precede implementation; the shorter
    document does not remove either run. Leave routine production bodies to the
    implementer. Include the owning Review Focus tests.
 2. Commit the verified capability, naming the files and intended message.
+
+Each labeled unit (Acceptance, Red, Implement, Green, Regression, Commit) is
+the step for "What a Step Contains" and the self-review step scan. The two
+checkboxes group tracking, not actions: each labeled step must make one action
+unambiguous. Write test assertions in fenced code blocks in the project's
+language, not as prose. Every command step must have its own `Expected:` line
+for executing-plans to compare with actual output.
 
 Use this task shape after the standard plan header:
 
@@ -42,11 +49,16 @@ Use this task shape after the standard plan header:
 
 - [ ] **Deliver [capability] with regression evidence.**
   Acceptance: [test names and exact assertions; spec values and error cases].
-  Red: run `[actual project command]` before implementation;
-  expect [the missing behavior, not an unrelated setup error].
+```
+[actual test code with assertions using exact spec values]
+```
+  Red: run `[actual project command]` before implementation.
+  Expected: [the missing behavior, not an unrelated setup error].
   Implement: [paths, signatures, and decisions the engineer cannot infer].
-  Green: run `[actual project command]`; expect [explicit passing result].
-  Regression: run `[relevant existing checks]`; expect [explicit passing result].
+  Green: run `[actual project command]`.
+  Expected: [explicit passing result].
+  Regression: run `[relevant existing checks]`.
+  Expected: [explicit passing result].
 
 - [ ] **Commit the verified capability.**
   Files: [exact changed paths]. Message: `[intended commit message]`.

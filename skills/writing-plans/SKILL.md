@@ -52,7 +52,7 @@ request the compact format or the default format; their request takes priority.
 
 The compact reference replaces only Step Granularity and Task Structure.
 Keep this skill's header, file/interface precision, self-review, and execution
-handoff, including the fork's deep-brainstorming reviews.
+handoff. Design/plan review gates of the active brainstorming path remain.
 
 ## Step Granularity
 

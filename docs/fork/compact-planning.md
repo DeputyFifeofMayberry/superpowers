@@ -17,9 +17,11 @@ keys have no effect. The profile is not installed into any of your projects
 automatically.
 
 Compact tasks deliver capabilities across the necessary layers. They retain
-Task N headings, exact paths, interfaces, test assertions, red/green commands,
-regression checks, and commits. Design and implementation-plan review still
-follow deep-brainstorming. Only the repeated microstep formatting changes.
+Task N headings, exact paths, interfaces, code assertions, red/green commands,
+regression checks, `Expected:` lines, and commits. Each labeled unit is a step;
+checkboxes group tracking only. Design/plan review gates of the active
+brainstorming path remain. This preference does not ensure a particular skill
+is invoked or override explicit human instructions about workflow.
 
 Baseline evaluation found that the existing skill already makes capability-sized
 tasks, but does not interpret this setting: without an explicit compact-format
