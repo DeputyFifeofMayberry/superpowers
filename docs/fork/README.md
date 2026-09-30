@@ -6,9 +6,14 @@ The manifest distinguishes installed behavior from candidates. A source recommen
 
 ## Initial selection
 
-- F01: proportional workflow. Compare against this fork's existing spike/bounded/architectural routing before editing it.
-- F03: compact vertical-slice planning. Evaluate as an opt-in preference while preserving task extraction, tests before implementation, exact interfaces, and existing review gates.
-- F32: sibling defect scans. Evaluate whether explicit guidance improves the existing verification rule.
-- F33: exact review finding verification. Evaluate whether explicit guidance improves the existing evidence requirement.
+- F01: [bounded behavior already covered](proportional-workflow.md); combining substantial-work approvals remains staged.
+- F03: [compact vertical-slice planning added as an opt-in preference](compact-planning.md). Task extraction, tests before implementation, exact interfaces, and existing review gates are preserved.
+- F32: [sibling defect scan staged](defect-scan-candidate.md); current baseline passed.
+- F33: [exact review finding verification staged](review-finding-candidate.md); current baseline passed.
+
+Read [the evaluation record](evaluation.md) for before/after evidence and limits.
+The compact preference is instruction-based and defaults off. No integration
+hook, domain pack, external dependency, or project setting was installed by this
+branch. The remaining manifest entries are candidates, except deliberate skips.
 
 The source audit is a preserved research snapshot. Its statement that the user's fork was unknown describes the earlier research stage; branch integration uses the base recorded in the manifest.
